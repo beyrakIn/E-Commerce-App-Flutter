@@ -36,12 +36,13 @@ class Home extends StatelessWidget {
                   product: products[index],
                   press: () {
                     Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => DetailsScreen(
-                            product: products[index],
-                          ),
-                        ));
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => DetailsScreen(
+                          product: products[index],
+                        ),
+                      ),
+                    );
                   },
                 ),
               ),
