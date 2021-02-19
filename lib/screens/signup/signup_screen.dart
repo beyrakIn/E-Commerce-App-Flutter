@@ -10,35 +10,20 @@ class _SignUpPageState extends State<SignUp> {
   Widget build(BuildContext context) {
     return new Scaffold(
         resizeToAvoidBottomPadding: false,
-        body: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
+        body: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: SafeArea(
+            child:
+                Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+              Spacer(),
               Container(
-                child: Stack(
-                  children: <Widget>[
-                    Container(
-                      padding: EdgeInsets.fromLTRB(15.0, 110.0, 0.0, 0.0),
-                      child: Text(
-                        'Signup',
-                        style: TextStyle(
-                            fontSize: 80.0, fontWeight: FontWeight.bold),
-                      ),
-                    ),
-                    Container(
-                      padding: EdgeInsets.fromLTRB(260.0, 125.0, 0.0, 0.0),
-                      child: Text(
-                        '.',
-                        style: TextStyle(
-                            fontSize: 80.0,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.green),
-                      ),
-                    )
-                  ],
+                child: Text(
+                  'Signup',
+                  style: TextStyle(fontSize: 80.0, fontWeight: FontWeight.bold),
                 ),
               ),
               Container(
-                  padding: EdgeInsets.only(top: 35.0, left: 20.0, right: 20.0),
+                  padding: EdgeInsets.symmetric(horizontal: 0, vertical: 10),
                   child: Column(
                     children: <Widget>[
                       TextField(
@@ -111,7 +96,7 @@ class _SignUpPageState extends State<SignUp> {
                               borderRadius: BorderRadius.circular(20.0)),
                           child: InkWell(
                             onTap: () {
-                              Navigator.of(context).pop();
+                              // Navigator.of(context).pop();
                             },
                             child: Center(
                               child: Text('Go Back',
@@ -124,27 +109,9 @@ class _SignUpPageState extends State<SignUp> {
                       ),
                     ],
                   )),
-              SizedBox(height: 15.0),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Text(
-                    'New to Spotify?',
-                    style: TextStyle(
-                      fontFamily: 'Montserrat',
-                    ),
-                  ),
-                  SizedBox(width: 5.0),
-                  InkWell(
-                    child: Text('Register',
-                        style: TextStyle(
-                            color: Colors.green,
-                            fontFamily: 'Montserrat',
-                            fontWeight: FontWeight.bold,
-                            decoration: TextDecoration.underline)),
-                  )
-                ],
-              )
-            ]));
+              Spacer()
+            ]),
+          ),
+        ));
   }
 }

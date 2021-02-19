@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/screens/signup/signup.dart';
+import 'package:flutter_app/screens/home/home_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
       title: "App",
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark(),
-      home: SignUp(),
+      home: HomeScreen(),
     );
   }
 }
