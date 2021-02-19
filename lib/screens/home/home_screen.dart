@@ -27,7 +27,7 @@ class _HomeState extends State<HomeScreen> {
     return Scaffold(
       extendBodyBehindAppBar: true,
       backgroundColor: Colors.teal,
-      appBar: _currentIndex == 0 ? buildAppBar(context) : null,
+      // appBar: _currentIndex == 0 ? buildAppBar(context) : null,
       body: tabs[_currentIndex],
       bottomNavigationBar: buildPadding(),
     );
