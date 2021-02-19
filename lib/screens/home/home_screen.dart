@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/screens/fragments/dashboard.dart';
 import 'package:flutter_app/screens/fragments/home.dart';
+import 'package:flutter_app/screens/fragments/profile.dart';
 import 'package:flutter_app/screens/fragments/search.dart';
 import 'package:flutter_app/screens/welcome/welcome_screen.dart';
 
@@ -15,7 +16,7 @@ class _HomeState extends State<HomeScreen> {
   int _currentIndex = 0;
   final tabs = [
     Home(),
-    dashboard(),
+    Profile(),
     search(),
   ];
 
@@ -26,7 +27,7 @@ class _HomeState extends State<HomeScreen> {
     return Scaffold(
       extendBodyBehindAppBar: true,
       backgroundColor: Colors.teal,
-      appBar: buildAppBar(context),
+      appBar: _currentIndex == 0 ? buildAppBar(context) : null,
       body: tabs[_currentIndex],
       bottomNavigationBar: buildPadding(),
     );
