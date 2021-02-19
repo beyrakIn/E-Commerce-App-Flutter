@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class Profile extends StatelessWidget {
   @override
@@ -10,7 +11,6 @@ class Profile extends StatelessWidget {
         elevation: 0,
         title: Text(
           "Profile",
-          textAlign: TextAlign.center,
         ),
       ),
       body: Column(
@@ -23,10 +23,10 @@ class Profile extends StatelessWidget {
               backgroundColor: Colors.red,
             ),
           ),
-          ProfileMenu(text: "My Account", icon: Icon(Icons.verified_user)),
-          ProfileMenu(text: "My Account", icon: Icon(Icons.verified_user)),
-          ProfileMenu(text: "My Account", icon: Icon(Icons.verified_user)),
-          ProfileMenu(text: "My Account", icon: Icon(Icons.verified_user)),
+          ProfileMenu(text: "Name", icon: Icon(Icons.verified_user)),
+          ProfileMenu(text: "Surname", icon: Icon(Icons.verified_user)),
+          ProfileMenu(text: "Email", icon: Icon(Icons.verified_user)),
+          ProfileMenu(text: "Log Out", icon: Icon(Icons.verified_user)),
         ],
       ),
     );
